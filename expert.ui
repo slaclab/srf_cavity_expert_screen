@@ -6,101 +6,284 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>415</height>
+    <width>632</width>
+    <height>513</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="2">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Cavity</string>
-     </property>
-    </widget>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>CM</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Cavity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
-   <item row="0" column="1">
-    <widget class="QComboBox" name="comboBox"/>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>SSA</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMLabel" name="PyDMLabel_5">
+       <property name="toolTip">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_10">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
-   <item row="0" column="3">
-    <widget class="QSpinBox" name="spinBox"/>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>RF Mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMLabel" name="PyDMLabel_7">
+       <property name="toolTip">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_11">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>SELAP</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_12">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>SELA</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_13">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>SEL</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_14">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>SEL Raw</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_15">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Pulse</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_16">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Chirp</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>CM</string>
-     </property>
-    </widget>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>RF State</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMLabel" name="PyDMLabel_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_17">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="PyDMPushButton" name="PyDMPushButton_18">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
-   <item row="1" column="0" colspan="4">
+   <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="tab_2">
       <attribute name="title">
        <string>SSA</string>
       </attribute>
-     </widget>
-     <widget class="QWidget" name="tab_2">
-      <attribute name="title">
-       <string>Cryo</string>
-      </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Status Message</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>On</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="3">
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Off</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Drain Voltage</string>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="2">
         <widget class="PyDMSpinbox" name="PyDMSpinbox">
          <property name="toolTip">
           <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Enable DC</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_2">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable DC</string>
          </property>
         </widget>
        </item>
@@ -114,20 +297,10 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_4">
-         <property name="toolTip">
-          <string/>
-         </property>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Disable RF</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="4" colspan="2">
-        <widget class="PyDMLabel" name="PyDMLabel_4">
-         <property name="toolTip">
-          <string/>
+          <string>Drain Voltage</string>
          </property>
         </widget>
        </item>
@@ -141,6 +314,47 @@
          </property>
         </widget>
        </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="PyDMPushButton" name="PyDMPushButton">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Enable DC</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>On</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="3">
+        <widget class="PyDMPushButton" name="PyDMPushButton_4">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Disable RF</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="5">
+        <widget class="PyDMLabel" name="PyDMLabel_6">
+         <property name="toolTip">
+          <string/>
+         </property>
+        </widget>
+       </item>
        <item row="5" column="1" colspan="3">
         <widget class="PyDMPushButton" name="PyDMPushButton_6">
          <property name="toolTip">
@@ -151,33 +365,6 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton_8">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reboot X-Port</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton_11">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Enable SD Card</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="4">
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="text">
-          <string>Reset</string>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="4">
         <widget class="PyDMLabel" name="PyDMLabel_2">
          <property name="toolTip">
@@ -185,10 +372,27 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="4">
-        <widget class="PyDMLabel" name="PyDMLabel_3">
+       <item row="3" column="1" colspan="3">
+        <widget class="PyDMPushButton" name="PyDMPushButton_2">
          <property name="toolTip">
           <string/>
+         </property>
+         <property name="text">
+          <string>Disable DC</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Status Message</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Fan Alarm Summary</string>
          </property>
         </widget>
        </item>
@@ -202,40 +406,17 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="4">
-        <widget class="PyDMPushButton" name="PyDMPushButton_10">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reset Processor</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="4">
-        <widget class="PyDMLabel" name="PyDMLabel_5">
+       <item row="3" column="4">
+        <widget class="PyDMLabel" name="PyDMLabel_3">
          <property name="toolTip">
           <string/>
          </property>
         </widget>
        </item>
-       <item row="6" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_9">
-         <property name="toolTip">
-          <string/>
-         </property>
+       <item row="1" column="1" colspan="3">
+        <widget class="QPushButton" name="pushButton_2">
          <property name="text">
-          <string>Reboot System</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_12">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable SD Card</string>
+          <string>Off</string>
          </property>
         </widget>
        </item>
@@ -246,17 +427,20 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Fan Alarm Summary</string>
+       <item row="4" column="4" colspan="2">
+        <widget class="PyDMLabel" name="PyDMLabel_4">
+         <property name="toolTip">
+          <string/>
          </property>
         </widget>
        </item>
-       <item row="8" column="1" colspan="5">
-        <widget class="PyDMLabel" name="PyDMLabel_6">
+       <item row="6" column="0" colspan="5">
+        <widget class="PyDMPushButton" name="PyDMPushButton_9">
          <property name="toolTip">
           <string/>
+         </property>
+         <property name="text">
+          <string>Reboot System</string>
          </property>
         </widget>
        </item>
