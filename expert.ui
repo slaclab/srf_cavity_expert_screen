@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>632</width>
-    <height>555</height>
+    <width>718</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -297,12 +297,18 @@
           <property name="toolTip">
            <string/>
           </property>
+          <property name="text">
+           <string>Online</string>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="PyDMPushButton" name="PyDMPushButton_20">
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="text">
+           <string>Offline</string>
           </property>
          </widget>
         </item>
@@ -311,6 +317,9 @@
           <property name="toolTip">
            <string/>
           </property>
+          <property name="text">
+           <string>Maintenance</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -318,12 +327,18 @@
           <property name="toolTip">
            <string/>
           </property>
+          <property name="text">
+           <string>Maintenance Done</string>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="PyDMPushButton" name="PyDMPushButton_23">
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="text">
+           <string>Ready</string>
           </property>
          </widget>
         </item>
