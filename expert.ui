@@ -430,168 +430,318 @@
       <attribute name="title">
        <string>SSA Troubleshooting</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="2">
-        <widget class="PyDMSpinbox" name="ssa_drain_voltage_spinbox">
-         <property name="toolTip">
-          <string/>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="3" column="0">
-        <widget class="PyDMPushButton" name="ssa_reset_internal_fault_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reset Internal Fault</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>1</string>
-         </property>
-        </widget>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <spacer name="horizontalSpacer_14">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Drain Voltage</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMSpinbox" name="ssa_drain_voltage_spinbox">
+           <property name="toolTip">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMLabel" name="ssa_drain_voltage_label">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="alarmSensitiveContent" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_15">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
-       <item row="0" column="4">
-        <widget class="PyDMLabel" name="ssa_drain_voltage_label">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="alarmSensitiveContent" stdset="0">
-          <bool>true</bool>
-         </property>
-        </widget>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <spacer name="horizontalSpacer_16">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Fan Alarm Summary</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMLabel" name="ssa_fan_alarm_label">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="alarmSensitiveContent" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_17">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Fan Alarm Summary</string>
-         </property>
-        </widget>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <spacer name="horizontalSpacer_18">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_rf_enable_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Enable RF</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_rf_disable_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Disable RF</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMLabel" name="ssa_rf_enable_readback_label">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="alarmSensitiveContent" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_19">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
-       <item row="1" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="ssa_dc_disable_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable DC</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>0</string>
-         </property>
-        </widget>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <spacer name="horizontalSpacer_20">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_dc_enable_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Enable DC</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_dc_disable_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Disable DC</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMLabel" name="ssa_dc_enable_readback_label">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="alarmSensitiveContent" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_21">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
-       <item row="4" column="0" colspan="5">
-        <widget class="PyDMPushButton" name="ssa_reboot_system_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reboot System</string>
-         </property>
-        </widget>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="PyDMPushButton" name="ssa_reset_internal_fault_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Reset Internal Fault</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_reset_external_fault_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Reset External Fault</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_reset_warning_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Reset Warning</string>
+           </property>
+           <property name="pressValue" stdset="0">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="PyDMPushButton" name="ssa_reboot_system_button">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Reboot System</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
-       <item row="3" column="4">
-        <widget class="PyDMPushButton" name="ssa_reset_warning_button">
-         <property name="toolTip">
-          <string/>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-         <property name="text">
-          <string>Reset Warning</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
          </property>
-         <property name="pressValue" stdset="0">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="ssa_rf_disable_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable RF</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="PyDMPushButton" name="ssa_dc_enable_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Enable DC</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="4">
-        <widget class="PyDMLabel" name="ssa_dc_enable_readback_label">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="alarmSensitiveContent" stdset="0">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="PyDMPushButton" name="ssa_rf_enable_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Enable RF</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="ssa_reset_external_fault_button">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reset External Fault</string>
-         </property>
-         <property name="pressValue" stdset="0">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Drain Voltage</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="4">
-        <widget class="PyDMLabel" name="ssa_rf_enable_readback_label">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="alarmSensitiveContent" stdset="0">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1" colspan="4">
-        <widget class="PyDMLabel" name="ssa_fan_alarm_label">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="alarmSensitiveContent" stdset="0">
-          <bool>true</bool>
-         </property>
-        </widget>
+        </spacer>
        </item>
       </layout>
      </widget>
