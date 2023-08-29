@@ -1,4 +1,10 @@
-from lcls_tools.superconducting.scLinac import SSA, CryoDict
+from lcls_tools.superconducting.scLinac import (
+    SSA,
+    CryoDict,
+    Cavity,
+    StepperTuner,
+    Piezo,
+)
 
 
 class ExpertSSA(SSA):
@@ -20,4 +26,17 @@ class ExpertSSA(SSA):
         self.fan_alarm_sum_pv: str = self.pv_addr("FanAlarmSum.SEVR")
 
 
-EXPERT_CRYOMODULE_OBJECTS = CryoDict(ssaClass=ExpertSSA)
+class ExpertCavity(Cavity):
+    def __init__(
+        self,
+        cavityNum,
+        rackObject,
+        ssaClass=ExpertSSA,
+        stepperClass=StepperTuner,
+        piezoClass=Piezo,
+    ):
+        super().__init__(cavityNum, rackObject, ssaClass=ExpertSSA)
+        self.hw_mode_des_pv: str = self.pv_addr("HWMODEDES")
+
+
+EXPERT_CRYOMODULE_OBJECTS = CryoDict(ssaClass=ExpertSSA, cavityClass=ExpertCavity)

@@ -1,13 +1,12 @@
 from PyQt5.QtWidgets import QComboBox, QSpinBox
 from lcls_tools.superconducting.scLinac import (
     Cryomodule,
-    Cavity,
 )
 from lcls_tools.superconducting.sc_linac_utils import ALL_CRYOMODULES
 from pydm import Display
 from pydm.widgets import PyDMLabel, PyDMPushButton, PyDMSpinbox
 
-from expert_linac import EXPERT_CRYOMODULE_OBJECTS, ExpertSSA
+from expert_linac import EXPERT_CRYOMODULE_OBJECTS, ExpertSSA, ExpertCavity
 
 
 class ExpertDisplay(Display):
@@ -50,10 +49,29 @@ class ExpertDisplay(Display):
         self.ssa_reboot_system_button: PyDMPushButton = self.ui.ssa_reboot_system_button
         self.ssa_fan_alarm_label: PyDMLabel = self.ui.ssa_fan_alarm_label
 
+        self.rf_mode_label: PyDMLabel = self.ui.rf_mode_label
+        self.selap_button: PyDMPushButton = self.ui.selap_button
+        self.sela_button: PyDMPushButton = self.ui.sela_button
+        self.sel_button: PyDMPushButton = self.ui.sel_button
+        self.sel_raw_button: PyDMPushButton = self.ui.sel_raw_button
+        self.pulse_button: PyDMPushButton = self.ui.pulse_button
+        self.chirp_button: PyDMPushButton = self.ui.chirp_button
+
+        self.rf_state_label: PyDMLabel = self.ui.rf_state_label
+        self.rf_on_button: PyDMPushButton = self.ui.rf_on_button
+        self.rf_off_button: PyDMPushButton = self.ui.rf_off_button
+
+        self.hw_mode_label: PyDMLabel = self.ui.hw_mode_label
+        self.online_button: PyDMPushButton = self.ui.online_button
+        self.offline_button: PyDMPushButton = self.ui.offline_button
+        self.maintenance_button: PyDMPushButton = self.ui.maintenance_button
+        self.maintenance_done_button: PyDMPushButton = self.ui.maintenance_done_button
+        self.ready_button: PyDMPushButton = self.ui.ready_button
+
         self.connect_signals()
 
     @property
-    def cavity(self) -> Cavity:
+    def cavity(self) -> ExpertCavity:
         cm_obj: Cryomodule = EXPERT_CRYOMODULE_OBJECTS[self.cm_combobox.currentText()]
         return cm_obj.cavities[self.cav_spinbox.value()]
 
@@ -79,3 +97,22 @@ class ExpertDisplay(Display):
         self.ssa_reset_warning_button.channel = ssa.reset_warning_pv
         self.ssa_reboot_system_button.channel = ssa.reboot_system_pv
         self.ssa_fan_alarm_label.channel = ssa.fan_alarm_sum_pv
+
+        self.rf_mode_label.channel = self.cavity.rf_mode_pv
+        self.selap_button.channel = self.cavity.rf_mode_ctrl_pv
+        self.sela_button.channel = self.cavity.rf_mode_ctrl_pv
+        self.sel_button.channel = self.cavity.rf_mode_ctrl_pv
+        self.sel_raw_button.channel = self.cavity.rf_mode_ctrl_pv
+        self.pulse_button.channel = self.cavity.rf_mode_ctrl_pv
+        self.chirp_button.channel = self.cavity.rf_mode_ctrl_pv
+
+        self.rf_state_label.channel = self.cavity.rf_state_pv
+        self.rf_on_button.channel = self.cavity.rf_control_pv
+        self.rf_off_button.channel = self.cavity.rf_control_pv
+
+        self.hw_mode_label.channel = self.cavity.hw_mode_pv
+        self.online_button.channel = self.cavity.hw_mode_des_pv
+        self.offline_button.channel = self.cavity.hw_mode_des_pv
+        self.maintenance_button.channel = self.cavity.hw_mode_des_pv
+        self.maintenance_done_button.channel = self.cavity.hw_mode_des_pv
+        self.ready_button.channel = self.cavity.hw_mode_des_pv

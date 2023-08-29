@@ -170,7 +170,7 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMLabel" name="PyDMLabel_7">
+         <widget class="PyDMLabel" name="rf_mode_label">
           <property name="toolTip">
            <string/>
           </property>
@@ -180,62 +180,80 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_11">
+         <widget class="PyDMPushButton" name="selap_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>SELAP</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>0</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_12">
+         <widget class="PyDMPushButton" name="sela_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>SELA</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>1</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_13">
+         <widget class="PyDMPushButton" name="sel_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>SEL</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>2</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_14">
+         <widget class="PyDMPushButton" name="sel_raw_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>SEL Raw</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>3</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_15">
+         <widget class="PyDMPushButton" name="pulse_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Pulse</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>4</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_16">
+         <widget class="PyDMPushButton" name="chirp_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Chirp</string>
+          </property>
+          <property name="pressValue" stdset="0">
+           <string>5</string>
           </property>
          </widget>
         </item>
@@ -264,7 +282,7 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMLabel" name="PyDMLabel_8">
+         <widget class="PyDMLabel" name="rf_state_label">
           <property name="toolTip">
            <string/>
           </property>
@@ -274,22 +292,28 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_17">
+         <widget class="PyDMPushButton" name="rf_on_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>On</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>1</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_18">
+         <widget class="PyDMPushButton" name="rf_off_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Off</string>
+          </property>
+          <property name="pressValue" stdset="0">
+           <string>0</string>
           </property>
          </widget>
         </item>
@@ -318,7 +342,7 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMLabel" name="PyDMLabel_9">
+         <widget class="PyDMLabel" name="hw_mode_label">
           <property name="toolTip">
            <string/>
           </property>
@@ -328,52 +352,67 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_21">
+         <widget class="PyDMPushButton" name="online_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Online</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>0</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_20">
+         <widget class="PyDMPushButton" name="offline_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Offline</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>2</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_22">
+         <widget class="PyDMPushButton" name="maintenance_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Maintenance</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>1</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_19">
+         <widget class="PyDMPushButton" name="maintenance_done_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Maintenance Done</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>3</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_23">
+         <widget class="PyDMPushButton" name="ready_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Ready</string>
+          </property>
+          <property name="pressValue" stdset="0">
+           <string>4</string>
           </property>
          </widget>
         </item>
@@ -496,6 +535,9 @@
          <property name="toolTip">
           <string/>
          </property>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item row="2" column="0">
@@ -536,12 +578,18 @@
          <property name="toolTip">
           <string/>
          </property>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item row="5" column="1" colspan="4">
         <widget class="PyDMLabel" name="ssa_fan_alarm_label">
          <property name="toolTip">
           <string/>
+         </property>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
