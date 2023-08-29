@@ -37,7 +37,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="cm_combobox"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -47,7 +47,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox"/>
+      <widget class="QSpinBox" name="cav_spinbox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>8</number>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_2">
@@ -93,29 +100,48 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMLabel" name="PyDMLabel_5">
+         <widget class="PyDMLabel" name="ssa_status_label">
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="alarmSensitiveContent" stdset="0">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_8">
+         <widget class="PyDMPushButton" name="ssa_on_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>On</string>
           </property>
+          <property name="pressValue" stdset="0">
+           <string>1</string>
+          </property>
          </widget>
         </item>
         <item>
-         <widget class="PyDMPushButton" name="PyDMPushButton_10">
+         <widget class="PyDMPushButton" name="ssa_off_button">
           <property name="toolTip">
            <string/>
           </property>
           <property name="text">
            <string>Off</string>
+          </property>
+          <property name="pressValue" stdset="0">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ssa_reset_button">
+          <property name="text">
+           <string>Reset</string>
           </property>
          </widget>
         </item>
@@ -147,6 +173,9 @@
          <widget class="PyDMLabel" name="PyDMLabel_7">
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="alarmSensitiveContent" stdset="0">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -239,6 +268,9 @@
           <property name="toolTip">
            <string/>
           </property>
+          <property name="alarmSensitiveContent" stdset="0">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -289,6 +321,9 @@
          <widget class="PyDMLabel" name="PyDMLabel_9">
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="alarmSensitiveContent" stdset="0">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -357,167 +392,156 @@
        <string>SSA Troubleshooting</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="2" column="2">
-        <widget class="PyDMSpinbox" name="PyDMSpinbox">
+       <item row="0" column="2">
+        <widget class="PyDMSpinbox" name="ssa_drain_voltage_spinbox">
          <property name="toolTip">
           <string/>
          </property>
         </widget>
        </item>
-       <item row="4" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton_3">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Enable RF</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Drain Voltage</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton_5">
+       <item row="3" column="0">
+        <widget class="PyDMPushButton" name="ssa_reset_internal_fault_button">
          <property name="toolTip">
           <string/>
          </property>
          <property name="text">
           <string>Reset Internal Fault</string>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="4">
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="text">
-          <string>Reset</string>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="PyDMPushButton" name="PyDMPushButton">
+       <item row="0" column="4">
+        <widget class="PyDMLabel" name="ssa_drain_voltage_label">
          <property name="toolTip">
           <string/>
          </property>
-         <property name="text">
-          <string>Enable DC</string>
+         <property name="alarmSensitiveContent" stdset="0">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>On</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_4">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable RF</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1" colspan="5">
-        <widget class="PyDMLabel" name="PyDMLabel_6">
-         <property name="toolTip">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_6">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reset External Fault</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="4">
-        <widget class="PyDMLabel" name="PyDMLabel_2">
-         <property name="toolTip">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="3">
-        <widget class="PyDMPushButton" name="PyDMPushButton_2">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Disable DC</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Status Message</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0">
+       <item row="5" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
           <string>Fan Alarm Summary</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="4">
-        <widget class="PyDMPushButton" name="PyDMPushButton_7">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="text">
-          <string>Reset Control Warning</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="4">
-        <widget class="PyDMLabel" name="PyDMLabel_3">
-         <property name="toolTip">
-          <string/>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1" colspan="3">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="PyDMPushButton" name="ssa_dc_disable_button">
+         <property name="toolTip">
+          <string/>
+         </property>
          <property name="text">
-          <string>Off</string>
+          <string>Disable DC</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>0</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1" colspan="4">
-        <widget class="PyDMLabel" name="PyDMLabel">
-         <property name="toolTip">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="4" colspan="2">
-        <widget class="PyDMLabel" name="PyDMLabel_4">
-         <property name="toolTip">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0" colspan="5">
-        <widget class="PyDMPushButton" name="PyDMPushButton_9">
+       <item row="4" column="0" colspan="5">
+        <widget class="PyDMPushButton" name="ssa_reboot_system_button">
          <property name="toolTip">
           <string/>
          </property>
          <property name="text">
           <string>Reboot System</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="PyDMPushButton" name="ssa_reset_warning_button">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Reset Warning</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="3">
+        <widget class="PyDMPushButton" name="ssa_rf_disable_button">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Disable RF</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="PyDMPushButton" name="ssa_dc_enable_button">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Enable DC</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="PyDMLabel" name="ssa_dc_enable_readback_label">
+         <property name="toolTip">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="PyDMPushButton" name="ssa_rf_enable_button">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Enable RF</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="3">
+        <widget class="PyDMPushButton" name="ssa_reset_external_fault_button">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>Reset External Fault</string>
+         </property>
+         <property name="pressValue" stdset="0">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Drain Voltage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="PyDMLabel" name="ssa_rf_enable_readback_label">
+         <property name="toolTip">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="4">
+        <widget class="PyDMLabel" name="ssa_fan_alarm_label">
+         <property name="toolTip">
+          <string/>
          </property>
         </widget>
        </item>
