@@ -86,11 +86,11 @@ class ExpertDisplay(Display):
 
         self.ssa_dc_enable_button.channel = ssa.dc_enable_pv
         self.ssa_dc_disable_button.channel = ssa.dc_enable_pv
-        self.ssa_dc_enable_readback_label = ssa.dc_enable_readback_pv
+        self.ssa_dc_enable_readback_label.channel = ssa.dc_enable_readback_pv
 
         self.ssa_rf_enable_button.channel = ssa.rf_enable_pv
         self.ssa_rf_disable_button.channel = ssa.rf_enable_pv
-        self.ssa_rf_enable_readback_label = ssa.rf_enable_readback_pv
+        self.ssa_rf_enable_readback_label.channel = ssa.rf_enable_readback_pv
 
         self.ssa_reset_internal_fault_button.channel = ssa.reset_internal_fault_pv
         self.ssa_reset_external_fault_button.channel = ssa.reset_external_fault_pv
